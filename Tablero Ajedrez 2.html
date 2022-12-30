@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x
+        x =  prompt("Nos indicarias la medida de la tabla?")
+        let i
+        i = parseInt(x)
+        let r
+        r = parseInt(x)
+        let linea
+        linea = "O"
+            if(i==1)
+            {
+                console.log("O")
+            }
+            else if(i%2==0)
+            {
+            for(let veces = r/2;veces>0;veces = veces-1){
+                linea = "OX"
+                for(let par = r;par>2;par = par - 2){
+                    linea = linea + "OX"}
+                    console.log(linea)
+                linea = "XO"
+                for(let par = r;par>2;par = par - 2){
+                    linea = linea + "XO"}
+                    console.log(linea)
+                }
+            }
+            else 
+            {
+                linea = "O"
+                for(let impar = r;impar>1;impar= impar-2){       
+                    linea = linea +"XO"}
+                    console.log(linea)
+                 for(let veces = (r-1)/2;veces>0;veces=veces-1){
+                    linea = "X"
+                    for(let impar = r;impar>1;impar= impar-2){       
+                    linea = linea +"OX"}
+                    console.log(linea)
+                    linea = "O"
+                    for(let impar = r;impar>1;impar= impar-2){       
+                    linea = linea +"XO"}
+                    console.log(linea)
+                    }  
+                    }
+     </script>
+</body>
+</html>
