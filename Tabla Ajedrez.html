@@ -12,35 +12,40 @@
         x =  prompt("Nos indicarias la medida de la tabla?")
         let i
         i = parseInt(x)
-        let r 
+        let r
         r = parseInt(x)
         let linea
         linea = "O"
-        if(i==1)
-        {
-            line = "O"
-        }
-        if(i%2==0)
-        {
-            linea = linea + "X";
-        } 
-                    while(i>2)
-                {   
-                    if(i%2==0)
-                    {
-                    linea = linea + "OX";
-                    i = i-2
-                    } 
-                    else
-                    {
-                    linea = linea + "XO";
-                    i = i-2
-                    }
-                }  
-         for(let veces = r; veces > 0; veces = veces - 1) {
-                console.log (linea)
-                console.log ("")
+             if(i%2==0)
+            {
+            linea = "OX"
+            
+                for(let par = r;par>2;par = par - 2){
+                    linea = linea + "OX"}
+                    console.log(linea)
+                linea = "XO"
+                for(let par=r;par>2;par = par - 2){
+                    linea = linea + "XO"}
+                    console.log(linea)
                 }
+            
+            else 
+            {
+                linea = "O"
+                for(let impar = r;impar>1;impar= impar-2){       
+                    linea = linea +"XO"}
+                    console.log(linea)
+                 for(let veces = (r-1)/2;veces>0;veces=veces-1){
+                    linea = "X"
+                    for(let impar = r;impar>1;impar= impar-2){       
+                    linea = linea +"OX"}
+                    console.log(linea)
+                    linea = "O"
+                    for(let impar = r;impar>1;impar= impar-2){       
+                    linea = linea +"XO"}
+                    console.log(linea)
+                    }  
+                    }
      </script>
 </body>
 </html>
